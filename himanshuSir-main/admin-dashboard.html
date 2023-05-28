@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin Dashboard</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      #content {
+        padding: 20px;
+      }
+
+      h2 {
+        margin-top: 0;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table th,
+      table td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+
+      table th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+      }
+
+      .file-input {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content">
+      <h2>Admin Dashboard</h2>
+
+      <h3>Upload Files</h3>
+
+      <div class="file-input">
+        <label for="mock-interview-file">Mock Interview:</label>
+        <input type="file" id="mock-interview-file" />
+      </div>
+
+      <div class="file-input">
+        <label for="resume-file">Resume:</label>
+        <input type="file" id="resume-file" />
+      </div>
+
+      <div class="file-input">
+        <label for="gd-file">GD:</label>
+        <input type="file" id="gd-file" />
+      </div>
+
+      <div class="file-input">
+        <label for="activity-sheet-file">Activity Sheet:</label>
+        <input type="file" id="activity-sheet-file" />
+      </div>
+
+      <h3>Uploaded Files</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Option</th>
+            <th>Filename</th>
+            <th>Uploaded On</th>
+          </tr>
+        </thead>
+        <tbody id="uploaded-data-body">
+          <tr id="mock-interview-row">
+            <td>Mock Interview</td>
+            <td class="filename"></td>
+            <td class="uploaded-on"></td>
+          </tr>
+          <tr id="resume-row">
+            <td>Resume</td>
+            <td class="filename"></td>
+            <td class="uploaded-on"></td>
+          </tr>
+          <tr id="gd-row">
+            <td>GD</td>
+            <td class="filename"></td>
+            <td class="uploaded-on"></td>
+          </tr>
+          <tr id="activity-sheet-row">
+            <td>Activity Sheet</td>
+            <td class="filename"></td>
+            <td class="uploaded-on"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+    <script src="admin-dashboard.js"></script>
+  </body>
+</html>
